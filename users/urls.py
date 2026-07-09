@@ -1,0 +1,1 @@
+from djnago.contrib.auth.views import LogoutView

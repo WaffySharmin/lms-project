@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>My Courses</h2>
+<div class="row">
+    {% for enrollment in enrollments %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ enrollment.course.title }}</h5>
+                <div class="progress mb-2">
+                    <div class="progress-bar" style="width: {{ enrollment.progress_percent }}%">
+                        {{ enrollment.progress_percent }}%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>You are not enrolled in any course yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

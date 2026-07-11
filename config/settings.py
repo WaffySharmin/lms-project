@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     # 'courses',
     # 'enrollments',
     # 'assignments',
-    # 'dashboard',
+    'dashboard',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -54,6 +54,7 @@ LOGIN_REDIRECT_URL = 'dashboard:home'
 LOGOUT_REDIRECT_URL = 'users:login'
 
 MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

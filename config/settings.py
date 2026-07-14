@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
 # LMS apps
     'users',
-    # 'courses',
+    'courses',
     # 'enrollments',
     # 'assignments',
     'dashboard',
